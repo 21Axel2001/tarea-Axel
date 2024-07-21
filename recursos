@@ -1,0 +1,63 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.modulo2;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+class Recursos {
+
+    
+    public String obtenerMensaje() {
+        return "Programación Orientada a Objetos 2021";
+    }
+
+    public String verificarEdad(int edad) {
+        if (edad >= 21) {
+            return "Mayor de edad";
+        } else {
+            return "Menor de edad";
+        }
+    }
+
+    public int multiplicar(int a, int b) {
+        return a * b;
+    }
+
+    public List<Integer> generarLista(int x) {
+        List<Integer> lista = new ArrayList<>();
+        for (int i = 1; i <= x; i++) {
+            lista.add(i);
+        }
+        return lista;
+    }
+}
+
+
+public class Modulo2 {
+    public static void main(String[] args) {
+        
+        Recursos recursos = new Recursos();
+
+       
+        System.out.println(recursos.obtenerMensaje());
+
+       
+        int edad1 = 20;
+        int edad2 = 25;
+        System.out.println("Edad " + edad1 + ": " + recursos.verificarEdad(edad1));
+        System.out.println("Edad " + edad2 + ": " + recursos.verificarEdad(edad2));
+
+        int a = 5;
+        int b = 7;
+        System.out.println("Multiplicación de " + a + " y " + b + ": " + recursos.multiplicar(a, b));
+
+        int x = 10;
+        System.out.println("Lista del 1 al " + x + ": " + recursos.generarLista(x));
+    }
+}
+
